@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Tempête — Dis-le avant que ça passe. Télécharge l'application Android Tempête, version 1.1.21." />
+<link rel="icon" href="data:," />
+<title>Tempête — Télécharger l'application</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Libre+Franklin:wght@700;800;900&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#f6f3ec;
+    --bg-soft:#efe9dd;
+    --surface:#ffffff;
+    --surface-2:#fdfcf9;
+    --ink:#10222f;
+    --ink-soft:#44586a;
+    --ink-faint:#6b7f92;
+    --line:#e2dccc;
+    --navy:#0a2743;
+    --navy-deep:#061a2f;
+    --navy-card:#0d3054;
+    --sky:#1e9be0;
+    --sky-bright:#48b9f5;
+    --sky-pale:#e3f2fc;
+    --gold:#c9971f;
+    --gold-pale:#faf0d3;
+    --green:#1d9e6c;
+    --shadow:0 18px 40px -18px rgba(10,39,67,.28);
+    --shadow-sm:0 8px 22px -10px rgba(10,39,67,.18);
+    --radius-lg:28px;
+    --radius-md:20px;
+    --radius-sm:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#071522;
+      --bg-soft:#0a1f33;
+      --surface:#0d2742;
+      --surface-2:#0b2138;
+      --ink:#eef5fa;
+      --ink-soft:#b8c9d8;
+      --ink-faint:#8ba2b6;
+      --line:#1d3d5c;
+      --navy:#0a2743;
+      --navy-deep:#04101e;
+      --navy-card:#10365e;
+      --sky-pale:#12314f;
+      --gold-pale:#2c2410;
+      --shadow:0 18px 40px -18px rgba(0,0,0,.6);
+      --shadow-sm:0 8px 22px -10px rgba(0,0,0,.5);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Libre Franklin","Manrope",system-ui,sans-serif;margin:0;line-height:1.12;letter-spacing:-.01em}
+  p{margin:0}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:linear-gradient(158deg,#0d3157 0%, var(--navy) 46%, var(--navy-deep) 100%);
+    color:#f2f8fd;
+  }
+  .hero-waves{position:absolute;inset:auto 0 -6px 0;width:100%;height:150px;pointer-events:none;opacity:.55}
+  .hero-inner{position:relative;padding:56px 0 120px;text-align:center}
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(72,185,245,.14);border:1px solid rgba(72,185,245,.4);
+    color:#bfe6fb;font-size:13.5px;font-weight:700;
+    padding:8px 16px;border-radius:999px;letter-spacing:.02em;
+  }
+  .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--sky-bright);flex:none}
+  .hero-mark{
+    width:92px;height:92px;margin:30px auto 4px;border-radius:26px;
+    background:linear-gradient(150deg,#1b4a7d,#0a2743);
+    border:1px solid rgba(72,185,245,.45);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 20px 36px -14px rgba(0,0,0,.55);
+  }
+  .hero h1{font-size:clamp(52px,10vw,84px);font-weight:900;color:#fff;margin-top:14px}
+  .hero .slogan{font-size:clamp(20px,4.4vw,27px);font-weight:600;color:#a9d9f7;margin-top:10px;font-style:italic}
+  .hero .lede{max-width:620px;margin:20px auto 0;color:#d3e5f2;font-size:17.5px}
+  .cta-block{margin-top:34px}
+  .btn-download{
+    display:inline-flex;align-items:center;gap:12px;
+    background:var(--sky);color:#fff;text-decoration:none;
+    font-weight:800;font-size:19px;
+    padding:18px 34px;border-radius:18px;min-height:60px;
+    box-shadow:0 16px 30px -10px rgba(30,155,224,.65);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn-download:hover{background:#1590d6}
+  .btn-download:active{transform:scale(.98)}
+  .btn-download svg{flex:none}
+  .cta-note{margin-top:14px;font-size:13.5px;color:#9dbfd9;max-width:480px;margin-left:auto;margin-right:auto}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
+  .hero-meta span{
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    color:#d9ecf8;font-size:14px;font-weight:600;padding:8px 15px;border-radius:999px;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 0 8px}
+  .section-head{max-width:640px;margin-bottom:30px}
+  .section-head h2{font-size:clamp(28px,5.4vw,38px);font-weight:800}
+  .section-head p{color:var(--ink-soft);margin-top:10px;font-size:17px}
+
+  .intro-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:32px;box-shadow:var(--shadow-sm);
+    display:grid;grid-template-columns:1fr;gap:18px;
+  }
+  .intro-card p{font-size:18px;color:var(--ink-soft)}
+  .intro-card p strong{color:var(--ink)}
+
+  .features{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:640px){.features{grid-template-columns:1fr 1fr}}
+  @media(min-width:960px){.features{grid-template-columns:1fr 1fr 1fr}}
+  .feature{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-md);
+    padding:26px 24px;box-shadow:var(--shadow-sm);
+  }
+  .feature .icon{
+    width:52px;height:52px;border-radius:16px;background:var(--sky-pale);
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--sky);
+  }
+  .feature.gold .icon{background:var(--gold-pale);color:var(--gold)}
+  .feature h3{font-size:19px;font-weight:800;margin-bottom:8px}
+  .feature p{color:var(--ink-soft);font-size:15.5px}
+  .feature .tag{
+    display:inline-block;margin-top:14px;font-size:12.5px;font-weight:800;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--sky);
+  }
+  .feature.gold .tag{color:var(--gold)}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:1fr;gap:16px;counter-reset:step}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{
+    background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-md);
+    padding:24px;
+  }
+  .step .num{
+    width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin-bottom:14px;
+  }
+  @media (prefers-color-scheme: dark){.step .num{background:var(--sky)}}
+  .step h3{font-size:17.5px;font-weight:800;margin-bottom:6px}
+  .step p{color:var(--ink-soft);font-size:15.5px}
+
+  /* domain note */
+  .note-card{
+    background:var(--bg-soft);border:1px dashed var(--line);border-radius:var(--radius-md);
+    padding:26px 28px;display:flex;gap:18px;align-items:flex-start;
+  }
+  .note-card .icon{flex:none;width:46px;height:46px;border-radius:14px;background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--sky)}
+  .note-card h3{font-size:18px;font-weight:800;margin-bottom:6px}
+  .note-card p{color:var(--ink-soft);font-size:15.5px}
+  .note-card code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;
+    background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1px 7px;color:var(--ink);
+  }
+
+  /* final CTA */
+  .final{
+    margin:64px 0 0;
+    background:linear-gradient(158deg,#0d3157,var(--navy-deep));
+    border-radius:var(--radius-lg);
+    padding:52px 28px;text-align:center;color:#eef6fc;position:relative;overflow:hidden;
+  }
+  .final h2{font-size:clamp(28px,5.6vw,40px);font-weight:900;color:#fff}
+  .final p{color:#c2dcee;margin:14px auto 0;max-width:520px}
+  .final .cta-block{margin-top:30px}
+  .final .cta-note{color:#8fb4cf}
+
+  footer{padding:40px 0 56px;text-align:center;color:var(--ink-faint);font-size:14.5px}
+  footer .f-name{font-family:"Libre Franklin",sans-serif;font-weight:800;color:var(--ink-soft);font-size:16px}
+  footer p+p{margin-top:6px}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .btn-download{transition:none}
+  }
+</style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <span class="hero-badge"><span class="dot"></span>Réseau social en construction</span>
+
+      <div class="hero-mark" aria-hidden="true">
+        <svg width="54" height="54" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M6 30c4.5 0 4.5-3.5 9-3.5S19.5 30 24 30s4.5-3.5 9-3.5 4.5 3.5 9 3.5" stroke="#48b9f5" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M6 21c4.5 0 4.5-3.5 9-3.5S19.5 21 24 21s4.5-3.5 9-3.5 4.5 3.5 9 3.5" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M24 5c1 4.5-3.8 5.6-3.8 9.4a3.8 3.8 0 0 0 7.6 0c0-1.5-.7-2.6-1.5-3.9.8.4 3.7 2.3 3.7 5.6A6.1 6.1 0 0 1 24 22a6.1 6.1 0 0 1-6-6.1C18 10.4 22.6 9.3 24 5Z" fill="#48b9f5"/>
+        </svg>
+      </div>
+
+      <h1>Tempête</h1>
+      <p class="slogan">« Dis-le avant que ça passe. »</p>
+      <p class="lede">Tempête est un réseau social en construction : tu publies sur le moment, l'instant vit sa vie, puis il s'efface. Et quand une grande histoire vraie éclate, elle devient une tempête — vérifiée, puis validée par la communauté.</p>
+
+      <div class="cta-block">
+        <a class="btn-download" href="https://github.com/mcirservice-cloud/tempete/releases/download/v1.1.21/tempete-v1.1.21.apk" download>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v11m0 0 4.2-4.2M12 14 7.8 9.8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17v2.2A1.8 1.8 0 0 0 5.8 21h12.4A1.8 1.8 0 0 0 20 19.2V17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          Télécharger Tempête
+        </a>
+        <p class="cta-note">Version 1.1.21 — Android. La page et l'application sont hébergées au même endroit, sans dépendre d'aucune plateforme.</p>
+      </div>
+
+      <div class="hero-meta">
+        <span>Android</span>
+        <span>Version 1.1.21</span>
+        <span>42 Mo</span>
+      </div>
+    </div>
+    <svg class="hero-waves" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 90 C 180 50, 320 130, 540 100 S 900 50, 1100 95 S 1330 130, 1440 95 L1440 150 L0 150 Z" fill="rgba(72,185,245,.18)"/>
+      <path d="M0 115 C 200 80, 380 145, 620 118 S 980 75, 1180 115 S 1360 145, 1440 120 L1440 150 L0 150 Z" fill="rgba(72,185,245,.28)"/>
+    </svg>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ============ PRÉSENTATION ============ -->
+    <section aria-labelledby="t-presentation">
+      <div class="section-head">
+        <h2 id="t-presentation">Un réseau qui vit au rythme du réel</h2>
+      </div>
+      <div class="intro-card">
+        <p>Sur Tempête, rien n'est fait pour durer éternellement. <strong>Les statuts disparaissent en 24 heures</strong> — ou en <strong>48 heures quand ils sont trempés</strong>. Ce qui compte, c'est ce qui se passe maintenant, entre personnes réelles.</p>
+        <p>Au-dessus du fil du quotidien, il y a les <strong>tempêtes</strong> : de grandes histoires vraies, vérifiées par plusieurs sources et validées par la communauté.</p>
+      </div>
+    </section>
+
+    <!-- ============ FONCTIONS ============ -->
+    <section aria-labelledby="t-fonctions">
+      <div class="section-head">
+        <h2 id="t-fonctions">Ce que fait Tempête</h2>
+        <p>Cinq idées simples, au cœur de l'application.</p>
+      </div>
+      <div class="features">
+
+        <article class="feature">
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Statuts éphémères</h3>
+          <p>Tu publies un moment, une photo, une parole. Le statut vit 24 heures, puis il disparaît. Trempé, il tient 48 heures.</p>
+          <span class="tag">24 h · 48 h trempé</span>
+        </article>
+
+        <article class="feature gold">
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M13 2 4.5 13.5H11L9.8 22 19 9.8h-6.5L13 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Des tempêtes vérifiées</h3>
+          <p>Une tempête, c'est une grande histoire vraie : vérifiée par plusieurs sources, puis validée par la communauté. Pas une rumeur, pas un buzz — un fait qui compte.</p>
+          <span class="tag">Faits vérifiés</span>
+        </article>
+
+        <article class="feature">
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="14.5" r="4.5" stroke="currentColor" stroke-width="2"/><path d="M11.3 11.2 20 2.5M16.5 6l3 3M13.8 8.7l2.4 2.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Une identité sans mot de passe</h3>
+          <p>Ton identité est vérifiée et elle t'appartient : pas de mot de passe à retenir ni à perdre. C'est ta clé qui prouve que c'est bien toi.</p>
+          <span class="tag">Identité vérifiée</span>
+        </article>
+
+        <article class="feature">
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Les pièces VRS</h3>
+          <p>En participant à une tempête validée, tu gagnes des VRS. Tu peux les envoyer à d'autres personnes — avec des frais ajustés selon la distance que le transfert parcourt.</p>
+          <span class="tag">Gagner · Envoyer · Recevoir</span>
+        </article>
+
+        <article class="feature">
+          <div class="icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" stroke-width="2"/><path d="M10 9.2v5.6l4.8-2.8L10 9.2Z" fill="currentColor"/></svg>
+          </div>
+          <h3>Le Studio dessin animé</h3>
+          <p>Le Studio transforme une vraie vidéo courte en dessin animé, sans rien inventer : la vidéo reste la vraie, les gestes et les lieux aussi — seul le dessin change.</p>
+          <span class="tag">Vidéo réelle transformée</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ INSTALLATION ============ -->
+    <section aria-labelledby="t-install">
+      <div class="section-head">
+        <h2 id="t-install">Installer en trois temps</h2>
+        <p>L'application s'installe directement depuis cette page, sans passer par une boutique.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num" aria-hidden="true">1</div>
+          <h3>Télécharge</h3>
+          <p>Appuie sur le bouton « Télécharger Tempête » sur cette page. Le fichier de l'application (42 Mo) arrive sur ton téléphone Android.</p>
+        </div>
+        <div class="step">
+          <div class="num" aria-hidden="true">2</div>
+          <h3>Ouvre le fichier</h3>
+          <p>Quand le téléchargement est terminé, ouvre le fichier reçu. Android te propose d'installer l'application.</p>
+        </div>
+        <div class="step">
+          <div class="num" aria-hidden="true">3</div>
+          <h3>Autorise et lance</h3>
+          <p>Si Android te demande une autorisation parce que l'application vient de cette page, accepte-la, termine l'installation, puis ouvre Tempête.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ADRESSE SOUHAITÉE ============ -->
+    <section aria-labelledby="t-adresse">
+      <div class="note-card">
+        <div class="icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.4 2.5 3.6 5.6 3.6 9S14.4 18.5 12 21c-2.4-2.5-3.6-5.6-3.6-9S9.6 5.5 12 3Z" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div>
+          <h3 id="t-adresse">Et le nom <code>app.tremper.tempete</code> ?</h3>
+          <p>C'est le nom souhaité pour l'adresse de Tempête. Pour l'instant, il ne peut pas servir d'adresse web publique : <code>.tempete</code> n'est pas une extension reconnue par les navigateurs. En attendant, c'est cette page qui sert d'adresse officielle pour télécharger l'application — garde son lien précieusement et partage-le à ceux que tu invites.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <div class="final">
+      <h2>Prêt à dire les choses avant qu'elles passent ?</h2>
+      <p>Télécharge Tempête, crée ton identité, et publie ton premier statut. Il vivra 24 heures — à toi de le rendre inoubliable.</p>
+      <div class="cta-block">
+        <a class="btn-download" href="https://github.com/mcirservice-cloud/tempete/releases/download/v1.1.21/tempete-v1.1.21.apk" download>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v11m0 0 4.2-4.2M12 14 7.8 9.8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17v2.2A1.8 1.8 0 0 0 5.8 21h12.4A1.8 1.8 0 0 0 20 19.2V17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          Télécharger Tempête
+        </a>
+        <p class="cta-note">Version 1.1.21 — Android. La page et l'application sont hébergées au même endroit, sans dépendre d'aucune plateforme.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="f-name">Tempête</p>
+      <p>« Dis-le avant que ça passe. »</p>
+      <p>Application Android — version 1.1.21</p>
+    </div>
+  </footer>
+
+</body>
+</html>
