@@ -8,7 +8,14 @@
 <link rel="icon" type="image/png" href="logo.png">
 <meta property="og:title" content="Tempête — Dis-le avant que ça passe.">
 <meta property="og:description" content="Le réseau social éphémère porté par les téléphones de ses membres. Aucun serveur central. Aucun mot de passe.">
-<meta property="og:image" content="logo.png">
+<meta property="og:image" content="https://mcirservice-cloud.github.io/tempete/logo.png">
+<meta name="theme-color" content="#070b15">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mcirservice-cloud.github.io/tempete/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tempête — Dis-le avant que ça passe.">
+<meta name="twitter:description" content="Le réseau social éphémère porté par les téléphones de ses membres. Aucun serveur central. Aucun mot de passe.">
+<meta name="twitter:image" content="https://mcirservice-cloud.github.io/tempete/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -1194,6 +1201,19 @@ footer {
   }
 }
 </style>
+
+<style>
+/* Ajouts v4 — Mission, Comparatif : même langage visuel que la refonte. */
+.grid5{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.cmp-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+table.cmp{width:100%;border-collapse:collapse;min-width:560px}
+table.cmp th,table.cmp td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:.95rem;vertical-align:top}
+table.cmp thead th{color:var(--ink);font-weight:700;background:rgba(124,224,255,.05)}
+table.cmp tbody th{color:var(--dim);font-weight:600;white-space:nowrap}
+table.cmp td{color:var(--dim)}
+table.cmp td.us{color:var(--ink);font-weight:600}
+table.cmp tbody tr:last-child th,table.cmp tbody tr:last-child td{border-bottom:none}
+</style>
 </head>
 <body>
 
@@ -1201,13 +1221,14 @@ footer {
   <div class="wrap nav-in">
     <a class="brand" href="#top"><img src="logo.png" alt="Logo Tempête">Tempête</a>
     <div class="nav-links">
+      <a href="#mission">Pourquoi Tempête</a>
       <a href="#reseau">Le réseau</a>
       <a href="#tempetes">Les Tempêtes</a>
       <a href="#vrs">VRS</a>
-      <a href="#studio">Studio</a>
+      <a href="#securite">Sécurité</a>
       <a href="#faq">FAQ</a>
     </div>
-    <div class="nav-cta"><a class="btn" href="https://github.com/mcirservice-cloud/tempete/releases/download/v1.1.21/tempete-v1.1.21.apk">Télécharger</a></div>
+    <div class="nav-cta"><a class="btn" href="https://github.com/mcirservice-cloud/tempete/releases/download/v1.1.25/tempete-v1.1.25.apk">Télécharger</a></div>
   </div>
 </nav>
 
@@ -1216,12 +1237,12 @@ footer {
     <img class="logo-big" src="logo.png" alt="Tempête">
     <span class="eyebrow">Le réseau social éphémère</span>
     <h1>Dis-le avant que<br><span class="g">ça passe.</span></h1>
-    <p class="sub">Tempête est un réseau social qui vit sur les téléphones de ses membres. Des statuts qui vivent 24 heures, des faits vérifiés qui deviennent des Tempêtes — et aucun serveur central, aucun mot de passe.</p>
+    <p class="sub">Tempête est un réseau social qui vit sur les téléphones de ses membres. Des statuts qui vivent 24 heures, des faits vérifiés qui deviennent des Tempêtes, des messages et des appels chiffrés — et aucun serveur central, aucun mot de passe.</p>
     <div class="ctas">
-      <a class="btn" href="https://github.com/mcirservice-cloud/tempete/releases/download/v1.1.21/tempete-v1.1.21.apk">Télécharger l'application</a>
-      <a class="btn ghost" href="#reseau">Découvrir le réseau</a>
+      <a class="btn" href="https://github.com/mcirservice-cloud/tempete/releases/download/v1.1.25/tempete-v1.1.25.apk">Télécharger l'application</a>
+      <a class="btn ghost" href="#mission">Pourquoi Tempête existe</a>
     </div>
-    <p class="ver">Version 1.1.21 · Android · Gratuit</p>
+    <p class="ver">Version 1.1.25 · Android · Gratuit</p>
     <div class="chips">
       <span class="chip"><i></i>Statuts de 24 heures</span>
       <span class="chip gold"><i></i>Tempêtes vérifiées par les faits</span>
@@ -1239,7 +1260,42 @@ footer {
   </div>
 </div>
 
-<section id="reseau">
+<section id="mission">
+  <div class="wrap">
+    <span class="eyebrow">Pourquoi Tempête</span>
+    <h2>Le web se remplit de faux.<br><span class="g">Tempête garde le vrai.</span></h2>
+    <p class="lead">D'ici 2030, les grands modèles de création et les grands réseaux auront rempli le web de contenus inventés par des machines — beaux, lisses, et faux. Tempête est construit pour faire exactement l'inverse : un réseau où ce qui se publie est réel, signé par un humain, et voué à passer. Cinq piliers le tiennent debout.</p>
+    <div class="grid5">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7ce0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M6 7.5h.01M6 16.5h.01"/><path d="M4 4l16 16" stroke="#f2c66d"/></svg></div>
+        <h3>Sans serveur centralisé</h3>
+        <p>Aucune entreprise ne détient le réseau : il vit sur les téléphones de ses membres, tous égaux. Il n'y a pas de centre à éteindre, à racheter ou à pirater.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7ce0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div>
+        <h3>Éphémère</h3>
+        <p>Un statut vit 24 heures, 48 heures s'il est trempé. Le présent redevient précieux, et personne ne fouille ton passé dans une archive éternelle.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7ce0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.2 8.4-7 10-3.8-1.6-7-5-7-10V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></div>
+        <h3>Authentique</h3>
+        <p>Chaque publication est signée par son auteur et inscrite dans un registre infalsifiable, Varus-Chain. Un fait vérifié reste vérifiable pour toujours.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7ce0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.7 4.3L18 9l-4.3 1.7L12 15l-1.7-4.3L6 9l4.3-1.7z"/><path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/><path d="M3 21L21 3" stroke="#f2c66d"/></svg></div>
+        <h3>L'IA refusée comme réelle</h3>
+        <p>Un contenu généré par une machine et présenté comme réel est détecté et rejeté. La seule transformation permise est étiquetée, toujours : celle du Studio.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7ce0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="12" r="2.2"/><circle cx="18.5" cy="5.5" r="2.2"/><circle cx="18.5" cy="18.5" r="2.2"/><path d="M7.5 10.8l8.8-4M7.5 13.2l8.8 4"/></svg></div>
+        <h3>Décentralisé</h3>
+        <p>Pas de chef, pas de centre : le réseau commence par un seul téléphone, comme la pluie commence par une goutte, et il grandit de proche en proche.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reseau" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <span class="eyebrow">Le réseau</span>
     <h2>La pluie n'a pas de centre.<br><span class="g">Tempête non plus.</span></h2>
@@ -1264,7 +1320,7 @@ footer {
   </div>
 </section>
 
-<section id="tempetes" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="tempetes">
   <div class="wrap">
     <span class="eyebrow">Les Tempêtes</span>
     <h2>Un fait devient une Tempête<br><span class="g">quand le monde le porte.</span></h2>
@@ -1284,7 +1340,7 @@ footer {
   </div>
 </section>
 
-<section id="vrs">
+<section id="vrs" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="vrs-flex">
       <div><img class="coin" src="piece-vrs.jpg" alt="La pièce VRS"></div>
@@ -1304,7 +1360,61 @@ footer {
   </div>
 </section>
 
-<section id="studio" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="securite">
+  <div class="wrap">
+    <span class="eyebrow">Sécurité</span>
+    <h2>La sécurité n'est pas une promesse.<br><span class="g">C'est l'état du code.</span></h2>
+    <p class="lead">Tempête ne demande pas ta confiance : il la prouve, objet par objet. Voici ce que l'application fait réellement, aujourd'hui, pour ton identité et tes conversations.</p>
+    <div class="feat">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7ce0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><circle cx="12" cy="15.2" r="1.6"/></svg></div>
+        <h3>Tes clés, dans un coffre</h3>
+        <p>Tes clés privées sont chiffrées au repos, gardées par le coffre matériel de ton téléphone — pas écrites en clair dans un fichier. Même la sauvegarde automatique du téléphone est fermée pour l'application.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7ce0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H4l2.3-2.9A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg></div>
+        <h3>Messages et appels chiffrés</h3>
+        <p>Conversations privées et appels sont chiffrés de bout en bout : les téléphones relais transportent sans pouvoir lire. Et quand un appel est chiffré, l'écran le dit — seulement dans ce cas, jamais de faux cadenas.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7ce0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4.5-1L20 7.5a2.1 2.1 0 0 0-3-3L5.5 16z"/><path d="M14.5 6.5l3 3"/></svg></div>
+        <h3>Un démarrage signé</h3>
+        <p>La liste des premiers relais qu'un nouveau téléphone contacte est elle-même signée. Un fichier modifié — même hébergé sur un serveur compromis — est rejeté avant tout usage.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7ce0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>Tout se revérifie</h3>
+        <p>Publications, réactions, transferts, appels : chaque objet porte la signature de son auteur, et chaque téléphone qui le reçoit la revérifie avant de l'accepter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="comparer" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="eyebrow">Le comparatif</span>
+      <h2>Deux idées <span class="g">du réseau social.</span></h2>
+    </div>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead>
+          <tr><th></th><th>Les réseaux classiques</th><th>Tempête</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Où vit le réseau</th><td>Les serveurs d'une entreprise</td><td class="us">Les téléphones des membres</td></tr>
+          <tr><th>La durée d'une publication</th><td>Pour toujours, par défaut</td><td class="us">24 heures — 48 si elle est trempée</td></tr>
+          <tr><th>Ton identité</th><td>Un mot de passe, gardé par l'entreprise</td><td class="us">Des clés, gardées par ton téléphone</td></tr>
+          <tr><th>Le contenu créé par IA</th><td>Encouragé, souvent sans étiquette</td><td class="us">Rejeté quand il se fait passer pour réel</td></tr>
+          <tr><th>L'histoire des faits</th><td>Modifiable, supprimable</td><td class="us">Signée et infalsifiable — Varus-Chain</td></tr>
+          <tr><th>Qui peut éteindre le réseau</th><td>L'entreprise, à tout moment</td><td class="us">Personne</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="studio">
   <div class="wrap">
     <span class="eyebrow">Le Studio</span>
     <h2>Tes vraies vidéos,<br><span class="g">redessinées en dessin animé.</span></h2>
@@ -1329,13 +1439,13 @@ footer {
   </div>
 </section>
 
-<section id="fonctions">
+<section id="fonctions" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <span class="eyebrow">Dans l'application</span>
     <h2>Tout Tempête, <span class="g">dans une seule appli.</span></h2>
     <div class="feat">
       <div class="card"><h3>Statuts éphémères</h3><p>Publie pour 24 heures. Trempe un statut pour le porter à 48 heures.</p></div>
-      <div class="card"><h3>Messages et appels</h3><p>Conversations directes et appels entre membres, d'identité à identité.</p></div>
+      <div class="card"><h3>Messages et appels</h3><p>Conversations chiffrées de bout en bout et appels entre membres, d'identité à identité.</p></div>
       <div class="card"><h3>Portefeuille VRS</h3><p>Reçois avec ton adresse publique ou ton QR, envoie en quelques secondes.</p></div>
       <div class="card"><h3>Radar IR</h3><p>Les pré-tempêtes vérifiées par l'IR, avec leurs sources.</p></div>
       <div class="card"><h3>Météo et alertes</h3><p>Le ciel de chez toi et les alertes qui comptent, sans bruit inutile.</p></div>
@@ -1349,8 +1459,8 @@ footer {
     <img src="logo.png" alt="Tempête">
     <h2>Prêt à entrer<br><span class="g">dans la Tempête ?</span></h2>
     <p>Télécharge l'application, crée ton identité en une minute — sans mot de passe — et publie ton premier statut.</p>
-    <a class="btn" href="https://github.com/mcirservice-cloud/tempete/releases/download/v1.1.21/tempete-v1.1.21.apk">Télécharger Tempête pour Android</a>
-    <p class="hint">Version 1.1.21 — Android. À l'installation, autorise l'installation depuis ton navigateur.</p>
+    <a class="btn" href="https://github.com/mcirservice-cloud/tempete/releases/download/v1.1.25/tempete-v1.1.25.apk">Télécharger Tempête pour Android</a>
+    <p class="hint">Version 1.1.25 — Android (42 Mo). À l'installation, autorise l'installation depuis ton navigateur.</p>
   </div>
 </section>
 
@@ -1368,6 +1478,14 @@ footer {
       <details>
         <summary>Faut-il créer un compte, avec un mot de passe ?</summary>
         <p>Non. Il n'y a ni mot de passe ni inscription auprès d'une entreprise. Ton identité est créée dans ton téléphone : une paire de clés, protégée par une phrase de 48 mots qui te sert de sauvegarde. Garde-la précieusement : elle seule peut restaurer ton identité.</p>
+      </details>
+      <details>
+        <summary>Qu'est-ce qui protège mon identité ?</summary>
+        <p>Tes clés sont créées dans ton téléphone et y restent chiffrées, gardées par son coffre matériel. L'application est aussi fermée à la sauvegarde automatique du téléphone : tes clés ne partent pas dans un nuage. Et ta phrase de 48 mots — que toi seul connais — peut restaurer ton identité si tu changes de téléphone.</p>
+      </details>
+      <details>
+        <summary>Mes messages et mes appels sont-ils privés ?</summary>
+        <p>Oui : ils sont chiffrés de bout en bout, de téléphone à téléphone. Les relais du réseau transportent des enveloppes qu'ils ne peuvent pas ouvrir. Pendant un appel chiffré, l'écran affiche « média chiffré » — et ne l'affiche que dans ce cas.</p>
       </details>
       <details>
         <summary>Où vivent mes données ?</summary>
@@ -1401,10 +1519,12 @@ footer {
         <p>Le réseau social éphémère, porté par les téléphones de ses membres. Dis-le avant que ça passe.</p>
       </div>
       <nav>
+        <a href="#mission">Pourquoi Tempête</a>
         <a href="#reseau">Le réseau</a>
         <a href="#vrs">VRS</a>
+        <a href="#securite">Sécurité</a>
         <a href="#faq">FAQ</a>
-        <a href="https://github.com/mcirservice-cloud/tempete/releases/tag/v1.1.21">Version 1.1.21</a>
+        <a href="https://github.com/mcirservice-cloud/tempete/releases/tag/v1.1.25">Version 1.1.25</a>
       </nav>
     </div>
     <div class="copy">
